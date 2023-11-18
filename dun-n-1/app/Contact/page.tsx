@@ -7,6 +7,10 @@ interface ContactProp{
 }
 
 const Contact: React.FC<ContactProp> = ({children}) => {
+
+
+
+    
     return ( 
         <div>
             <NavBar>
