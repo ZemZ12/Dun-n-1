@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily : {
+        custom : ['MyCustomFont', 'sans-serif'],
+    },
+    fontFace: {
+      'MyCustomFont' : {
+        'fontFamily': 'MyCustomFont',
+        'fontStyle': 'normal',
+        'fontWeight': 'normal',
+        'src': 'url(/fonts/Anton-Regular.ttf) format("truetype")',
+      },
+    },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
