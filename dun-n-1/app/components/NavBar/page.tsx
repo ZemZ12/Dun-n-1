@@ -17,24 +17,26 @@ interface NavBarProp{
 
 const NavBar: React.FC <NavBarProp>= ({children}) => {
 
-    const [scrolled, setScrolled] = useState(true);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 50;
-            setScrolled(isScrolled);
-        }
+    
         
+        const [scrolled, setScrolled] = useState(false);
 
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll",handleScroll);
-        }
-    } ,[scrolled]);
+        useEffect(() => {
+            const handleScroll = () => {
+                const isScrolled = window.scrollY > 50;
+                setScrolled(isScrolled);
+            }
+            
+            window.addEventListener("scroll", handleScroll);
+    
+            return () => {
+                window.removeEventListener("scroll",handleScroll);
+            }
+        } ,[scrolled]);
+    
     
     return (  
-    <div className= { `bg-gray-800 pr-4 w-full rounded-md ${scrolled ? 'fixed z-50 transition bg-opacity-0 duration-500': 'opacity-100 fixed z-50'}`} >
+    <div className= { `bg-gray-800 pr-4 w-full rounded-md  ${scrolled ? 'fixed z-50 transition bg-opacity-0 duration-500': 'fixed opacity-100 shadow-2xl z-50'}`} >
         
         <nav className="flex justify-between items-center pr-3">
                 <div>
@@ -43,17 +45,17 @@ const NavBar: React.FC <NavBarProp>= ({children}) => {
                     </Link>
                 </div>
             <ul className="flex items-center justify-end space-x-20">
-                <li className="m-auto text-lg transform hover:scale-150 transition duration-300 hover:text-orange-400 ease-in-out"> 
+                <li className="m-auto text-lg transform hover:scale-110 transition duration-300 hover:text-orange-400 ease-in-out"> 
                     <Link href="/Contact" >
                         Contact 
                     </Link>
                 </li>
-                <li className="m-auto text-lg transform hover:scale-150 transition duration-300  hover:text-orange-400 ease-in-out">
+                <li className="m-auto text-lg transform hover:scale-110 transition duration-300  hover:text-orange-400 ease-in-out">
                     <Link href="/AboutUs">
                         About Us
                     </Link>
                 </li>
-                <li className="m-auto text-lg transform hover:scale-150 transition duration-300 hover:text-orange-400 ease-in-out">
+                <li className="m-auto text-lg transform hover:scale-110 transition duration-300 hover:text-orange-400 ease-in-out">
                     <Link href="/Menu">
                         Menu
                     </Link>
@@ -63,6 +65,7 @@ const NavBar: React.FC <NavBarProp>= ({children}) => {
         </nav>
         
     </div>
+    
     );
 }
  
