@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
       fontFamily : {
         custom : ['MyCustomFont', 'sans-serif'],
     },

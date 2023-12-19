@@ -17,8 +17,6 @@ interface NavBarProp{
 
 const NavBar: React.FC <NavBarProp>= ({children}) => {
 
-    
-        
         const [scrolled, setScrolled] = useState(false);
 
         useEffect(() => {
@@ -26,7 +24,6 @@ const NavBar: React.FC <NavBarProp>= ({children}) => {
                 const isScrolled = window.scrollY > 50;
                 setScrolled(isScrolled);
             }
-            
             window.addEventListener("scroll", handleScroll);
     
             return () => {
@@ -45,17 +42,17 @@ const NavBar: React.FC <NavBarProp>= ({children}) => {
                     </Link>
                 </div>
             <ul className="flex items-center justify-end space-x-20">
-                <li className="m-auto text-lg transform hover:scale-110 transition duration-300 hover:text-orange-400 ease-in-out"> 
+                <li className="m-auto text-lg transform hover:scale-110 transition duration-300 hover:text-orange-400 ease-in-out hover:bg-white/10 p-2 rounded-lg"> 
                     <Link href="/Contact" >
                         Contact 
                     </Link>
                 </li>
-                <li className="m-auto text-lg transform hover:scale-110 transition duration-300  hover:text-orange-400 ease-in-out">
+                <li className="m-auto text-lg transform hover:scale-110 transition duration-300  hover:text-orange-400 ease-in-out hover:bg-white/10 p-2 rounded-lg">
                     <Link href="/AboutUs">
                         About Us
                     </Link>
                 </li>
-                <li className="m-auto text-lg transform hover:scale-110 transition duration-300 hover:text-orange-400 ease-in-out">
+                <li className="m-auto text-lg transform hover:scale-110 transition duration-300 hover:text-orange-400 ease-in-out hover:bg-white/10 p-2 rounded-lg">
                     <Link href="/Menu">
                         Menu
                     </Link>

@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import NavBar from "../components/NavBar/page";
+import Footer from "../components/Footer/page";
 import './layout.css'
 
 interface ContactProp{
@@ -16,7 +17,7 @@ const Contact: React.FC<ContactProp> = ({children}) => {
             </head>
             <body>
                 <div>
-                <NavBar>
+                <NavBar children={undefined}>
 
                 </NavBar>
                 </div>
@@ -25,12 +26,7 @@ const Contact: React.FC<ContactProp> = ({children}) => {
                         <p>Contact Page</p>
                     </section>
                 </div>
-                <footer className="bg-gray-800 py-4">
-                    <div className="mx-auto flex justify-between items-center container">
-                        <p>this is my footer</p>
-                        <p>2023 Dun-N-1</p>
-                    </div>
-                </footer>
+                <Footer/>
             </body>
         </html>
      );
