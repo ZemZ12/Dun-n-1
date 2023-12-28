@@ -7,9 +7,8 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 const Testimonials = () => {
   return (
     
-    <div className="text-4xl p-5">
-        <h1>Testimonials</h1>
-        <div className="text-lg">
+    <div className="p-5">
+        <h1 className="text-4xl">Testimonials</h1>
         <div className="flex max-w-5xl mx-auto gap-8 group">
             <div className="bg-white/10 rounded-xl group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer p-8">
                 <h4 className="text-lg">Kathy Kimzey</h4>
@@ -18,7 +17,7 @@ const Testimonials = () => {
                     They had hot food and it was good. Biscuits and gravy and even fried chicken.
                     Thanks for making our travels and stops a good experience."
                 </p>
-                <div>
+                <div >
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
@@ -34,7 +33,7 @@ const Testimonials = () => {
                 The convenience of grabbing a superb cup of joe while on the road is unmatched. 
                 Kudos to Dun-n-1 for elevating the gas station coffee experience!"
                 </p>
-                <div>
+                <div >
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
@@ -51,19 +50,16 @@ const Testimonials = () => {
                  each cup reflects a genuine commitment to excellence. 
                  A definite stop for travelers seeking both convenience and exceptional coffee."
                 </p>
-                <div>
+                <div >
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
                     <FontAwesomeIcon icon={faStar} />
                 </div>
-             
             </div>
         </div>
-        </div>
     </div>
-    
   );
 };
 

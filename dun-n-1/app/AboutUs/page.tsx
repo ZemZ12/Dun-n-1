@@ -1,8 +1,10 @@
 import React, { ReactNode } from "react";
+
+
 import Link from "next/link";
 import NavBar from "../components/NavBar/page";
 import Footer from "../components/Footer/page";
-
+import MapAPI from "../components/Map/page";
 import './layout.css'
 
 interface AboutUsProp{
@@ -23,7 +25,7 @@ const AboutUs: React.FC<AboutUsProp> = ({children}) => {
             </div>
             <div >
                 <section className="flex justify-center items-center h-screen">
-                    <p>About Us Page</p>
+                    <MapAPI></MapAPI>
                 </section>
             </div>
             <Footer/>
